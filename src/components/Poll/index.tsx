@@ -1,20 +1,21 @@
 import { PollOption } from "../PollOption";
+import { Option } from '../../reducers/poll-options';
 
 import "./Poll.css";
 
 interface PropTypes {
   title: string;
-  values: string[];
+  options: Option[];
 }
 
-export function Poll({ title, values }: PropTypes) {
-  const options = values.map((value) => (
-    <PollOption key={value} name={value} />
+export function Poll({ title, options }: PropTypes) {
+  const pollOptions = options.map((option) => (
+    <PollOption key={option.name} option={option} />
   ));
   return (
     <div>
       <div className="title">{title}</div>
-      <div>{options}</div>
+      <div>{pollOptions}</div>
     </div>
   );
 }

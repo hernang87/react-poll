@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { optionsReducer } from "./reducers/options";
+import { pollOptionsReducer } from "./reducers/poll-options";
 import { useDispatch, useSelector } from "react-redux";
 
 export const store = configureStore({
   reducer: {
-    options: optionsReducer,
+    options: pollOptionsReducer,
   },
 });
 

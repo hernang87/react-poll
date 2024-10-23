@@ -1,16 +1,16 @@
 import React from 'react';
 import './App.css';
 import { useAppSelector } from './store';
-import { selectOptions } from './reducers/options';
+import { selectPollOptions } from './reducers/poll-options';
 import { Poll } from './components/Poll';
 
 function App() {
-  const values = useAppSelector(selectOptions);
+  const values = useAppSelector(selectPollOptions);
 
   return (
     <div className="App">
       <header className="App-header">
-        <Poll title="Choose a JS framework!" values={values} />
+        <Poll title="Choose a JS framework!" options={values} />
       </header>
     </div>
   );
