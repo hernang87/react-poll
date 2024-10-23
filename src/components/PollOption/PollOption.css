@@ -1,4 +1,5 @@
 .poll-option {
+  position: relative;
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
@@ -9,4 +10,22 @@
   width: 100%;
   color: white;
   font-size: 20px;
+}
+
+.bar {
+  position: absolute;
+  background-color: green;
+  min-height: 43px;
+  border-radius: 12px;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.name {
+  z-index: 2;
+}
+
+.votes {
+  z-index: 2;
 }
