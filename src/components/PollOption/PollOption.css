@@ -1,0 +1,8 @@
+.poll-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: #395d8f;
+  border-radius: 12px;
+  padding: 10px 15px;
+}
